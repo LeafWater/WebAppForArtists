@@ -1,0 +1,34 @@
+﻿@model WebAppForArtists.Picture
+
+@{
+    ViewBag.Title = "ShowPicture";
+}
+
+<h2>ShowPicture</h2>
+
+<div>
+    <h4>Picture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.Name)" width="250" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.PictureID })|*@
+    @Html.ActionLink("Back to main profile", "UserDashBoard", "DashBoard")
+</p>

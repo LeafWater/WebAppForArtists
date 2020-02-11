@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Art Space";
+}
+<head>
+    <link rel="Stylesheet" href="~/Content/ArtSpaceStyle.css">
+</head>
+
+<body background="~/Content/PageItems/sky.jpg">
+    <div class="containerWelcome">
+        <div>Welcome in your Art Space!</div>
+        <div><img src="~/Content/PageItems/nextBtn.png" onclick="location.href='@Url.Action("Login", "Login")'" /></div>
+    </div>
+</body>

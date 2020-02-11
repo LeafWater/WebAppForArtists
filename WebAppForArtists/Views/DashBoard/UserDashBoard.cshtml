@@ -1,0 +1,60 @@
+﻿@model WebAppForArtists.Models.UserStorage
+
+@{
+    ViewBag.Title = "UserDashBoard";
+}
+
+<head>
+    <link rel="Stylesheet" href="~/Content/ArtSpaceStyle.css">
+</head>
+
+<body background="~/Content/PageItems/sky2.jpg">
+    <div class="containerMainPage">
+        <div class="containerProfile">
+            <div>
+                @if (Session["FirstName"] != null)
+                {
+                    <p>Welcome @Session["FirstName"].ToString()! </p>
+                }
+            </div>
+            <div>
+                <img class="addPicBtn" style="width:80%;" src="~/Content/PageItems/AddPicBtn.png" onclick="location.href='@Url.Action("Upload", "Picture")'" />
+                <img id="settingsBtn" style="width:40%;" src="~/Content/PageItems/settingsBtn.gif" onclick="" />
+            </div>
+            <div>
+                <h4>You have: </h4>
+                <p>@ViewBag.countedPictures pictures</p>
+                <p>@ViewBag.countedTags tags</p>
+            </div>
+        </div>
+        <div class="containerPictures">
+            @using (Html.BeginForm("UserDashBoard", "DashBoard", FormMethod.Post))
+            {
+                <div id="tagDropDown">@Html.DropDownListFor(model => model.CurrentTagID, new SelectList(ViewBag.tags), "Choose tag")</div>
+            }
+
+            <div class="pictureBoard">
+                @foreach(var picturePath in ViewBag.pictures)
+                {
+                    <img src="@Url.Content(picturePath)"/>
+                }
+            </div>
+        </div>
+        <div class="containerNotes">
+            <div class="note1">
+                <h4>My notes:</h4>
+                <textarea placeholder="Write here your inspirations, ideas and more..."></textarea>
+            </div>
+            <div class="note2">
+                <h4>To paint next:</h4>
+                <ul class="sticky">
+                    <li>Note text</li>
+                    <li>Note text</li>
+                    <li>Note text</li>
+                    <li>Note text</li>
+                    <li>Note text</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>

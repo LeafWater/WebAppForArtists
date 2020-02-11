@@ -1,0 +1,100 @@
+﻿body {
+    height: 100%;
+    width: 100vw;
+    background-size:cover;
+}
+footer {
+    padding: 20px 0 0 0;
+    color: white;
+    text-align: center;
+}
+.containerWelcome {
+    display: grid;
+    grid-template-columns: 70% auto;
+    /*grid-column-gap: 10px;*/
+    padding: 15%;
+    font-size: 10vh;
+    color: white;
+    font-weight: 700;
+}
+.containerWelcome div {
+    display: grid;
+}
+    .containerWelcome div img:hover {
+        background-color: #592454;
+        opacity: 0.9;
+    }
+.containerWelcome div img {
+    height: 40vh;
+    align-self: center;
+    cursor: pointer;
+}
+
+.container {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.containerMainPage {
+    display: grid;
+    grid-template-columns: 15% 65% 20%;
+    width: 90vw;
+}
+.containerMainPage {
+
+}
+.containerProfile {
+    display: inline-grid;
+    grid-template-rows: auto auto auto;
+    background-color: #262626;
+    color: white;
+    font-size:medium;
+}
+.containerProfile div {
+    margin: 5%;
+    align-self: center;
+    text-align:center;
+}
+.containerProfile div:first-of-type {
+    font-weight: bold;
+    font-size: 30px;
+}
+.containerPictures {
+    max-height: 90vh;
+    overflow: hidden;
+}
+.pictureBoard {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-height: 90vh;
+    overflow-y: scroll;
+}
+#tagDropDown, .pictureBoard img {
+    width:100%;
+}
+.containerNotes {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.containerNotes div {
+    margin: 10px;
+}
+.note1 {
+    background-color:lemonchiffon;
+}
+.note1 textarea {
+    width: 100%;
+    height:70%;
+}
+.note2 {
+    background-color: pink;
+}
+.addPicBtn {
+    cursor:pointer;
+    margin-bottom: 20px;
+}
+#settingsBtn {
+    cursor: pointer;
+    margin-bottom: 40px;
+}
