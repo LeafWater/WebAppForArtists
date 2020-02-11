@@ -14,6 +14,9 @@ namespace WebAppForArtists.Models
         public List<string> Pictures { get; set; }
         public List<int> TagsId { get; set; }                       //to select only User's tags, not all
 
+        public string userNote1 { get; set; }
+        public string userNote2 { get; set; }
+
         public void getPictures(UserStorage us)
         {
             using (DB_Model_Entities db = new DB_Model_Entities())

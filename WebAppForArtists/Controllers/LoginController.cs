@@ -26,6 +26,7 @@ namespace WebAppForArtists.Controllers
                 {
                     Session["UserID"] = obj.UserID.ToString();
                     Session["FirstName"] = obj.FirstName.ToString();
+                    Session["LastName"] = obj.LastName.ToString();
                     Session["Email"] = obj.Email.ToString();
                     return RedirectToAction("UserDashBoard", "DashBoard");
                 }

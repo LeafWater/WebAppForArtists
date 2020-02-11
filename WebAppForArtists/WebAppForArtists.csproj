@@ -132,6 +132,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PictureController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="DataModel2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,7 +151,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Models\UserStorage.cs" />
     <Compile Include="Picture.cs">
       <DependentUpon>DataModel2.tt</DependentUpon>
@@ -243,6 +243,7 @@
     <Content Include="Views\ViewTest.cshtml" />
     <Content Include="Views\Picture\ShowPicture.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Settings\Settings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

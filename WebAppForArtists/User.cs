@@ -32,7 +32,7 @@ namespace WebAppForArtists
         public string Email { get; set; }
         [Required(ErrorMessage = "Pasword is required")]
         [DataType(DataType.Password)]
-        [Compare("ConfirmedPassword")]
+        [Compare("ConfirmedPassword", ErrorMessage = "The Password and Confirm Password fields do not match.")]
         public string Password { get; set; }
         [DataType(DataType.Password)]
         [DisplayName("Confirm your password.")]

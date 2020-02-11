@@ -38,7 +38,7 @@ namespace WebAppForArtists.Controllers
             pictureModel.Name = "~/Content/Pictures/" + fileName;
             fileName = Path.Combine(Server.MapPath("~/Content/Pictures/"), fileName);
             pictureModel.PictureFile.SaveAs(fileName);
-            pictureModel.UserID = (int)Session["UserID"];
+            pictureModel.UserID = Int32.Parse(Session["UserID"].ToString());
 
             UserStorage us = new UserStorage();
             us.UserID = Int32.Parse(Session["UserID"].ToString());
